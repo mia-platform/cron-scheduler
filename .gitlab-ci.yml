@@ -1,0 +1,15 @@
+include:
+  # main template
+  - project: 'platform/pipelines-templates'
+    file: '/build/node/template-node-npm.yml'
+    ref: master
+
+  # test-latest step
+  - project: 'platform/pipelines-templates'
+    file: '/build/node/template-node-npm-test-latest.yml'
+    ref: master
+
+variables:
+  IMAGE_NAME: core/cron-scheduler
+
+

@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Send Push Notification",
+    "filePath": "./default-scripts/send-curl",
+    "crontab": "*/5 * * * * *",
+    "timezone": "Europe/Rome",
+    "env": {
+      "MONGO_URL": "mongodb://localhost/curl-store",
+      "MONGO_COLLECTION": "curl"
+    }
+  }
+]

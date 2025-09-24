@@ -1,0 +1,55 @@
+{
+  "name": "@mia-platform/core-cron-scheduler",
+  "version": "3.4.6",
+  "description": "The microservice responsible for handling and calling the cron scripts inside the platform.",
+  "homepage": "https://www.mia-platform.eu/",
+  "bugs": {
+    "url": "https://makeitapp.atlassian.net"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Mia Platform Core Team<core@mia-platform.eu>",
+  "contributors": [
+    "Davide Tantillo <davide.tantillo@mia-platform.eu>",
+    "Tommaso Allevi <tommaso.allevi@mia-platform.eu>",
+    "Jacopo Andrea Giola <jacopo.giola@mia-platform.eu>"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://git.tools.mia-platform.eu:platform/core/cron-scheduler.git"
+  },
+  "scripts": {
+    "checkonly": "! grep -R '\\.only' tests/",
+    "coverage": "npm run unit -- --coverage-report=text-summary",
+    "postcoverage": "tap --coverage-report=lcov --no-browser",
+    "lint": "standard-mia | snazzy",
+    "start": "node index.js",
+    "test": "npm run lint && npm run unit && npm run checkonly",
+    "unit": "tap -b -o tap.log tests/*",
+    "update-docker-version": "sed -i.bck \"s|version=\\\"[0-9]*\\.[0-9]*\\.[0-9]*.*\\\"|version=\\\"${npm_package_version}\\\"|\" Dockerfile",
+    "version": "npm run update-docker-version && rm -fr Dockerfile.bck && git add Dockerfile"
+  },
+  "dependencies": {
+    "ajv": "^6.12.6",
+    "cron": "^1.8.2",
+    "pino": "^5.17.0"
+  },
+  "devDependencies": {
+    "@mia-platform/standard-mia": "^1.1.0",
+    "pre-commit": "^1.2.2",
+    "snazzy": "^8.0.0",
+    "tap": "^12.7.0"
+  },
+  "engines": {
+    "node": ">=v8.17.0"
+  },
+  "private": true,
+  "eslintConfig": {
+    "extends": "./node_modules/@mia-platform/eslint-config-mia/eslintrc.json"
+  },
+  "standard-mia": {
+    "ignore": [
+      "**/node_modules"
+    ]
+  }
+}

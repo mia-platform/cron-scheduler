@@ -1,0 +1,29 @@
+{
+  "name": "@mia-platform/default-send-curl",
+  "version": "1.0.1",
+  "description": "The cron script for sending curl",
+  "homepage": "https://www.mia-platform.eu/",
+  "bugs": {
+    "url": "https://makeitapp.atlassian.net"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Mia Platform Core Team<core@mia-platform.eu>",
+  "contributors": [
+    "Davide Tantillo <davide.tantillo@mia-platform.eu>"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ajv": "^6.12.6",
+    "got": "^8.3.2",
+    "mongodb": "^3.6.6",
+    "pino": "^5.17.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=v8.17.0"
+  },
+  "private": true
+}
