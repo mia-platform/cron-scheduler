@@ -30,7 +30,7 @@
     "version": "npm run update-docker-version && rm -fr Dockerfile.bck && git add Dockerfile"
   },
   "dependencies": {
-    "ajv": "^6.12.6",
+    "ajv": "^8.18.0",
     "cron": "^1.8.2",
     "pino": "^5.17.0"
   },
@@ -38,7 +38,7 @@
     "@mia-platform/standard-mia": "^1.1.0",
     "pre-commit": "^1.2.2",
     "snazzy": "^8.0.0",
-    "tap": "^12.7.0"
+    "tap": "^21.6.2"
   },
   "engines": {
     "node": ">=v8.17.0"
