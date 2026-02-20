@@ -16,7 +16,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "ajv": "^6.12.6",
+    "ajv": "^8.18.0",
     "got": "^8.3.2",
     "mongodb": "^3.6.6",
     "pino": "^5.17.0"
